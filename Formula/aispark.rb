@@ -1,7 +1,7 @@
 class Aispark < Formula
   desc "aispark shell with llms"
   homepage "https://github.com/iflytek/spark-ai-cli"
-  version "0.1.3"
+  version "0.1.4"
 
   if Hardware::CPU.arm?
     url "https://github.com/iflytek/spark-ai-cli/releases/download/v0.1.3/aispark-darwin-arm64.tar.gz"
