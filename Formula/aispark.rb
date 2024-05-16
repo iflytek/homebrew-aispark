@@ -1,6 +1,7 @@
 class Aispark < Formula
   desc "aispark shell with llms"
   homepage "https://github.com/iflytek/spark-ai-cli"
+  version "0.1.3"
 
   if Hardware::CPU.arm?
     url "https://github.com/iflytek/spark-ai-cli/releases/download/v0.1.3/aispark-darwin-arm64.gz"
@@ -12,12 +13,18 @@ class Aispark < Formula
 
   def install
     if Hardware::CPU.arm?
-      system "gzip", "-d", "aispark-darwin-arm64.gz"
-      bin.install "aispark-darwin-arm64" => "aispark"
+      gz_file = "aispark-darwin-arm64.gz"
+      binary_file = "aispark-darwin-arm64"
     else
-      system "gzip", "-d", "aispark-darwin-amd64.gz"
-      bin.install "aispark-darwin-amd64" => "aispark"
+      gz_file = "aispark-darwin-amd64.gz"
+      binary_file = "aispark-darwin-amd64"
     end
+
+    # 解压 .gz 文件
+    system "gzip", "-d", buildpath/gz_file
+
+    # 安装解压后的文件
+    bin.install buildpath/binary_file => "aispark"
   end
 
   test do
