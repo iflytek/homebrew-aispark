@@ -12,10 +12,10 @@ class Aispark < Formula
 
   def install
     if Hardware::CPU.arm?
-      system "gzip", "-d", "aispark-darwin-arm64"
+      system "gzip", "-d", "aispark-darwin-arm64.gz"
       bin.install "aispark-darwin-arm64" => "aispark"
     else
-      system "gzip", "-d", "aispark-darwin-amd64"
+      system "gzip", "-d", "aispark-darwin-amd64.gz"
       bin.install "aispark-darwin-amd64" => "aispark"
     end
   end
