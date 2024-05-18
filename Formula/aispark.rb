@@ -3,8 +3,8 @@ class Aispark < Formula
   homepage "https://github.com/iflytek/spark-ai-cli"
   version "v0.1.5"
 
-  armsha256="9ccc7cc644770304a4cd23bbb1b97f4c0231418c72b3f06b5a3c366350b892b9"
-  amdsha256="ab959820320078a83d9cf6cbd5863bd4f06b406d8ee7f4d9b5f216ed2417cf22"
+  armsha256="9bb1b6cddf8c8e8e156fe39f4e32897f7ed4563c93f7324c2dec042a43e105c6"
+  amdsha256="56a542283ca332001e6c6796fb980585aaa410a608bde06a4a8aa3487af4311a"
   if Hardware::CPU.arm?
     url "http://repo.model.xfyun.cn/api/packages/aispark/generic/aispark/v0.1.5/aispark-darwin-arm64.tar.gz"
     sha256 armsha256
