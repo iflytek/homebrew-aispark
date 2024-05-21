@@ -1,15 +1,15 @@
 class Aispark < Formula
   desc "aispark shell with llms"
   homepage "https://github.com/iflytek/spark-ai-cli"
-  version "v0.1.5"
+  version "v0.1.6"
 
-  armsha256="9bb1b6cddf8c8e8e156fe39f4e32897f7ed4563c93f7324c2dec042a43e105c6"
-  amdsha256="56a542283ca332001e6c6796fb980585aaa410a608bde06a4a8aa3487af4311a"
+  armsha256="a5dd8ebe4e1439ee80b97c529599260e48caafeb19e732b71124d1be1e1cb594"
+  amdsha256="44648f2eea084042e9ac4c277378164002742db1b8d670cfe3720bb16bfad435"
   if Hardware::CPU.arm?
-    url "http://repo.model.xfyun.cn/api/packages/aispark/generic/aispark/v0.1.5/aispark-darwin-arm64.tar.gz"
+    url "http://repo.model.xfyun.cn/api/packages/aispark/generic/aispark/v0.1.6/aispark-darwin-arm64.tar.gz"
     sha256 armsha256
   else
-    url "http://repo.model.xfyun.cn/api/packages/aispark/generic/aispark/v0.1.5/aispark-darwin-amd64.tar.gz"
+    url "http://repo.model.xfyun.cn/api/packages/aispark/generic/aispark/v0.1.6/aispark-darwin-amd64.tar.gz"
     sha256 amdsha256
   end
 
